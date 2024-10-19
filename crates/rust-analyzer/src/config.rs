@@ -866,6 +866,7 @@ impl Config {
                         SnippetScopeDef::Expr => SnippetScope::Expr,
                         SnippetScopeDef::Type => SnippetScope::Type,
                         SnippetScopeDef::Item => SnippetScope::Item,
+                        SnippetScopeDef::File => SnippetScope::File,
                     };
                     match Snippet::new(
                         &def.prefix,
@@ -2237,6 +2238,7 @@ enum SnippetScopeDef {
     Expr,
     Item,
     Type,
+    File,
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, Default)]

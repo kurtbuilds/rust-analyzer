@@ -113,6 +113,8 @@ pub enum SnippetScope {
     Item,
     Expr,
     Type,
+    // only applies to the root level of a file. items can be at this level or nested within other items
+    File,
 }
 
 /// A user supplied snippet.
